@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-image: url('banner.jpg'); /* Hintergrundbild */
+    background-size: cover; /* Bild skaliert, um den Bildschirm zu füllen */
+    background-position: center; /* Bild wird zentriert */
+    background-repeat: no-repeat; /* Bild wiederholt sich nicht */
+    height: 100vh; /* Höhe des Bildes: gesamter Bildschirm */
+    color: white; /* Weißer Text für besseren Kontrast */
+    display: flex; /* Flexbox für zentrierten Inhalt */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden; /* Verhindert horizontales Scrollen */
+}
+
+
+.header {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+}
+
+
+.topnav {
+    position: absolute; /* Absolute Positionierung */
+    top: 20px; /* Abstand vom oberen Rand */
+    left: 50%; /* Zentrierung horizontal */
+    transform: translateX(-50%); /* Feine Zentrierung */
+    background-color: rgba(0, 0, 0, 0.5); /* Transparenter Hintergrund */
+    border-radius: 10px; /* Abgerundete Ecken */
+    overflow: hidden;
+    display: flex;
+    padding: 10px;
+}
+
+.topnav a {
+    text-decoration: none;
+    color: #f2f2f2;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 0 5px;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.container {
+  display: flex;
+}
+
+/* Sidebar-Styling */
+            .sidebar {
+                height: 100%;
+                width: 0;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                background-color: #111;
+                overflow-x: hidden;
+                transition: 0.5s;
+                padding-top: 60px;
+            }
+
+            .sidebar a {
+                padding: 10px 15px;
+                text-decoration: none;
+                font-size: 18px;
+                color: white;
+                display: block;
+                transition: 0.3s;
+            }
+
+            .sidebar a:hover {
+                background-color: #575757;
+            }
+
+            .sidebar .closebtn {
+                position: absolute;
+                top: 0;
+                right: 25px;
+                font-size: 36px;
+                margin-left: 50px;
+            }
+
+            /* Button zum Öffnen der Sidebar */
+            .openbtn {
+                font-size: 20px;
+                cursor: pointer;
+                background-color: #111;
+                color: white;
+                border: none;
+                padding: 10px 15px;
+                position: fixed;
+                top: 10px;
+                left: 10px;
+                border-radius: 5px;
+            }
+
+            .openbtn:hover {
+                background-color: #444;
+            }
